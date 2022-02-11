@@ -48,7 +48,6 @@ async def get_file_id_from_message(message):
     (
         filters.document
         | filters.photo
-        | filters.sticker
         | filters.animation
         | filters.video
     )
@@ -108,12 +107,11 @@ async def nsfw_scan_command(_, message):
     if (
         not reply.document
         and not reply.photo
-        and not reply.sticker
         and not reply.animation
         and not reply.video
     ):
         await message.reply_text(
-            "`Reply to an image/document/sticker/animation to scan it.`"
+            "`Reply to an image/document/animation to scan it.`"
         )
         return
     m = await message.reply_text("`Scanning...`")
