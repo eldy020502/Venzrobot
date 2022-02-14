@@ -461,7 +461,7 @@ def makepack_internal(
                 reply_markup=keyboard,
                 parse_mode=ParseMode.HTML,
             )
-        elif e.message == "Peer_id_invalid" atau "bot diblokir oleh pengguna":
+        elif e.message == "Peer_id_invalid atau bot diblokir oleh pengguna":
             msg.reply_text(
                 f"{context.bot.first_name} diblokir olehmu.",
                 reply_markup=InlineKeyboardMarkup(
