@@ -95,7 +95,7 @@ def kang(update, context):
         elif msg.reply_to_message.sticker and msg.reply_to_message.sticker.emoji:
             sticker_emoji = msg.reply_to_message.sticker.emoji
         else:
-            sticker_emoji = "🙂"
+            sticker_emoji = "💏"
 
         if not is_animated:
             try:
@@ -130,14 +130,14 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Stiker Anda telah ditambahkan!</b>"
+                    f"\nEmojinya adalah : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -172,34 +172,34 @@ def kang(update, context):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
                     )
                     msg.reply_text(
-                        f"<b>Your sticker has been added!</b>"
-                        f"\nEmoji Is : {sticker_emoji}",
+                        f"<b>Stiker Anda telah ditambahkan!</b>"
+                        f"\nEmojinya adalah : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
                 elif e.message == "Invalid sticker emojis":
                     msg.reply_text("Invalid emoji(s).")
                 elif e.message == "Stickers_too_much":
-                    msg.reply_text("Max packsize reached. Press F to pay respecc.")
+                    msg.reply_text("Ukuran paket maksimal tercapai. Tekan F untuk memberi hormat.")
                 elif e.message == "Internal Server Error: sticker set not found (500)":
                     edited_keyboard = InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
                     )
                     msg.reply_text(
-                        f"<b>Your sticker has been added!</b>"
-                        f"\nEmoji Is : {sticker_emoji}",
+                        f"<b>Stiker Anda telah ditambahkan!</b>"
+                        f"\nEmojinya adalah : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
@@ -238,14 +238,14 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Stiker Anda telah ditambahkan!</b>"
+                    f"\nEmojinya adalah : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -269,14 +269,14 @@ def kang(update, context):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
                     )
                     msg.reply_text(
-                        f"<b>Your sticker has been added!</b>"
-                        f"\nEmoji Is : {sticker_emoji}",
+                        f"<b>Stiker Anda telah ditambahkan!</b>"
+                        f"\nEmojinya adalah : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
@@ -289,7 +289,7 @@ def kang(update, context):
                 png_sticker = urlemoji[1]
                 sticker_emoji = urlemoji[2]
             except IndexError:
-                sticker_emoji = "🙃"
+                sticker_emoji = "😭"
             urllib.urlretrieve(png_sticker, kangsticker)
             im = Image.open(kangsticker)
             maxsize = (512, 512)
@@ -322,13 +322,13 @@ def kang(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="View Pack", url=f"t.me/addstickers/{packname}"
+                            text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                         )
                     ]
                 ]
             )
             msg.reply_text(
-                f"<b>Your sticker has been added!</b>" f"\nEmoji Is : {sticker_emoji}",
+                f"<b>Stiker Anda telah ditambahkan!</b>" f"\nEmojinya adalah : {sticker_emoji}",
                 reply_markup=edited_keyboard,
                 parse_mode=ParseMode.HTML,
             )
@@ -361,13 +361,13 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lihat Pack", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
+                    f"<b>Stiker Anda telah ditambahkan!</b>"
                     f"\nEmoji Is : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
@@ -375,17 +375,17 @@ def kang(update, context):
             elif e.message == "Invalid sticker emojis":
                 msg.reply_text("Invalid emoji(s).")
             elif e.message == "Stickers_too_much":
-                msg.reply_text("Max packsize reached. Press F to pay respecc.")
+                msg.reply_text("Ukuran paket maksimal tercapai. Tekan F untuk memberi hormat.")
             elif e.message == "Internal Server Error: sticker set not found (500)":
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Stiker Anda telah ditambahkan!</b>"
+                    f"\nEmojinya adalah : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
             print(e)
     else:
-        packs_text = "*Please reply to a sticker, or image to kang it!*\n"
+        packs_text = "*Tolong balas stiker, atau gambar untuk mengambilnya!*\n"
         if packnum > 0:
             firstpackname = "a" + str(user.id) + "_by_" + context.bot.username
             for i in range(0, packnum + 1):
@@ -397,7 +397,7 @@ def kang(update, context):
             packs = f"t.me/addstickers/{packname}"
 
         edited_keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="View Pack", url=f"{packs}")]]
+            [[InlineKeyboardButton(text="Lihat Pack", url=f"{packs}")]]
         )
         msg.reply_text(
             packs_text, reply_markup=edited_keyboard, parse_mode=ParseMode.MARKDOWN
@@ -422,7 +422,7 @@ def makepack_internal(
     name = user.first_name
     name = name[:50]
     keyboard = InlineKeyboardMarkup(
-        [[InlineKeyboardButton(text="View Pack", url=f"{packname}")]]
+        [[InlineKeyboardButton(text="Lihat Pack", url=f"{packname}")]]
     )
     try:
         extra_version = ""
@@ -453,17 +453,17 @@ def makepack_internal(
 
     except TelegramError as e:
         print(e)
-        if e.message == "Sticker set name is already occupied":
+        if e.message == "Nama kumpulan stiker sudah terisi":
             msg.reply_text(
-                "<b>Your Sticker Pack is already created!</b>"
-                "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
-                "\n\n<b>Send /stickers to find any sticker pack.</b>",
+                "<b>Pack Stiker Anda sudah dibuat!</b>"
+                "\n\nSekarang Anda dapat membalas gambar, stiker, dan stiker animasi dengan /steal untuk menambahkannya ke paket Anda"
+                "\n\n<b>Kirim / stiker untuk menemukan paket stiker apa pun.</b>",
                 reply_markup=keyboard,
                 parse_mode=ParseMode.HTML,
             )
-        elif e.message == "Peer_id_invalid" or "bot was blocked by the user":
+        elif e.message == "Peer_id_invalid" atau "bot diblokir oleh pengguna":
             msg.reply_text(
-                f"{context.bot.first_name} was blocked by you.",
+                f"{context.bot.first_name} diblokir olehmu.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -474,11 +474,11 @@ def makepack_internal(
                     ]
                 ),
             )
-        elif e.message == "Internal Server Error: created sticker set not found (500)":
+        elif e.message == "Kesalahan Server Internal: set stiker yang dibuat tidak ditemukan (500)":
             msg.reply_text(
-                "<b>Your Sticker Pack has been created!</b>"
-                "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
-                "\n\n<b>Send /stickers to find sticker pack.</b>",
+                "<b>Paket Stiker Anda telah dibuat!</b>"
+                "\n\nSekarang Anda dapat membalas gambar, stiker, dan stiker animasi dengan /steal untuk menambahkannya ke paket Anda"
+                "\n\n<b>Kirim / stiker untuk menemukan paket stiker.</b>",
                 reply_markup=keyboard,
                 parse_mode=ParseMode.HTML,
             )
@@ -486,14 +486,14 @@ def makepack_internal(
 
     if success:
         msg.reply_text(
-            "<b>Your Sticker Pack has been created!</b>"
-            "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
-            "\n\n<b>Send /stickers to find sticker pack.</b>",
+            "<b>Paket Stiker Anda telah dibuat!</b>"
+            "\n\nSekarang Anda dapat membalas gambar, stiker, dan stiker animasi dengan /steal untuk menambahkannya ke paket Anda"
+            "\n\n<b>Kirim / stiker untuk menemukan paket stiker.</b>",
             reply_markup=keyboard,
             parse_mode=ParseMode.HTML,
         )
     else:
-        msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
+        msg.reply_text("Gagal membuat paket stiker. Mungkin karena blek mejik.")
 
 
 def getsticker(update, context):
@@ -504,8 +504,8 @@ def getsticker(update, context):
         update.effective_message.reply_text(
             "Hello"
             + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
-            + ", Please check the file you requested below."
-            "\nPlease use this feature wisely!",
+            + ", Silakan periksa file yang Anda minta di bawah ini."
+            "\nSilakan gunakan fitur ini dengan bijak!",
             parse_mode=ParseMode.HTML,
         )
         context.bot.sendChatAction(chat_id, "upload_document")
@@ -521,7 +521,7 @@ def getsticker(update, context):
         update.effective_message.reply_text(
             "Hello"
             + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
-            + ", Please reply to sticker message to get sticker image",
+            + ", Harap balas pesan stiker untuk mendapatkan gambar stiker",
             parse_mode=ParseMode.HTML,
         )
 
@@ -530,7 +530,7 @@ def cb_sticker(update: Update, context: CallbackContext):
     msg = update.effective_message
     split = msg.text.split(" ", 1)
     if len(split) == 1:
-        msg.reply_text("Provide some name to search for pack.")
+        msg.reply_text("Berikan beberapa nama untuk mencari paket.")
         return
 
     scraper = cloudscraper.create_scraper()
@@ -560,7 +560,7 @@ def getsticker(update: Update, context: CallbackContext):
         os.remove("sticker.png")
     else:
         update.effective_message.reply_text(
-            "Please reply to a sticker for me to upload its PNG."
+            "Tolong balas stiker untuk saya upload PNG-nya."
         )
 
 
@@ -572,7 +572,7 @@ def delsticker(update, context):
         msg.reply_text("Deleted!")
     else:
         update.effective_message.reply_text(
-            "Please reply to sticker message to del sticker"
+            "Mohon balas pesan stiker ke del stiker"
         )
 
 
