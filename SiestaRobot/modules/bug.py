@@ -47,7 +47,7 @@ async def bug(_, msg: Message):
     datetimes_fmt = "%d-%m-%Y"
     datetimes = datetime.utcnow().strftime(datetimes_fmt)
 
-    thumb = "https://telegra.ph/file/bd218d4af1c69c586ebb0.jpg"
+    thumb = "https://telegra.ph/file/0a56b5f98a223180d709e.jpg"
     
     bug_report = f"""
 **#BUG : ** **@{owner_usn}**
@@ -62,24 +62,24 @@ async def bug(_, msg: Message):
 
     
     if msg.chat.type == "private":
-        await msg.reply_text("❎ <b>This command only works in groups.</b>")
+        await msg.reply_text("❎ <b>Perintah ini hanya berfungsi dalam grup.</b>")
         return
 
     if user_id == owner_id:
         if bugs:
             await msg.reply_text(
-                "❎ <b>How can be owner bot reporting bug??</b>",
+                "❎ <b>Bagaimana bisa pemilik bot melaporkan bug??</b>",
             )
             return
         else:
             await msg.reply_text(
-                "Owner noob!"
+                "Owner Bego Ihhh😡!"
             )
     elif user_id != owner_id:
         if bugs:
             await msg.reply_text(
                 f"<b>Bug Report : {bugs}</b>\n\n"
-                "✅ <b>The bug was successfully reported to the support group!</b>",
+                "✅ <b>Terima Kasih Kakak {mention} Kami Dari Pihak Venz Akan Melaporkan Bug Ini Kepada Owner Yaa🙏</b>",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -97,18 +97,18 @@ async def bug(_, msg: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                "➡ View Bug", url=f"{msg.link}")
+                                "{mention}", url=f"{msg.link}")
                         ],
                         [
                             InlineKeyboardButton(
-                                "❌ Close", callback_data="close_send_photo")
+                                "❌ Tutup", callback_data="close_send_photo")
                         ]
                     ]
                 )
             )
         else:
             await msg.reply_text(
-                f"❎ <b>No bug to Report!</b>",
+                f"❎ <b>Tidak ada bug untuk Dilaporkan!</b>",
             )
         
 
