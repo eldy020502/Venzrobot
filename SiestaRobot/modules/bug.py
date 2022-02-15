@@ -79,7 +79,7 @@ async def bug(_, msg: Message):
         if bugs:
             await msg.reply_text(
                 f"<b>Bug Report : {bugs}</b>\n\n"
-                "✅ <b>Terima Kasih Kakak {mention} Kami Dari Pihak Venz Akan Melaporkan Bug Ini Kepada Owner Yaa🙏</b>",
+                "✅ <b>Terima Kasih Kakak **{mention}** Kami Dari Pihak Venz Akan Melaporkan Bug Ini Kepada Owner Yaa🙏</b>",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -97,7 +97,7 @@ async def bug(_, msg: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                "{mention}", url=f"{msg.link}")
+                                "**{mention}**", url=f"{msg.link}")
                         ],
                         [
                             InlineKeyboardButton(
